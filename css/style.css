@@ -1,0 +1,472 @@
+/* stile h4 */
+h4 {
+    font-size: 2vw;
+    font-family: monospace;
+    margin: auto;
+    padding: 0.5vw 0;
+    text-align: center;
+    background: blue;
+    color: #fff;
+}
+
+/* sile container */
+.container {
+    position: relative;
+    height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+/* stile elenco regions rimaste */
+#list h4 {
+    margin-bottom: 0.7vw;
+}
+
+#list div {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 0.7vw;
+    padding: 0px 0.3vw;
+    justify-items: center;
+    background-color: #e0e0e0;
+}
+
+#region span {
+    font-size: 1.5vw;
+    font-weight: 500;
+    padding: 0.5vw 0.8vw;
+}
+
+#region .sbarrato {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* impaginazione map */
+#map-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* L'immagine della mappa è sul fondo */
+    display: none;
+}
+
+#map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#map ul, #map li { 
+    margin: 0;
+    margin-top: 0.4vw;
+    margin-left: 0.4vw;
+    padding: 0;
+    list-style: none;
+}
+
+#map li {
+    text-indent: -99999em;
+    width:0;
+    height:0;
+}
+
+#map a {
+    position: absolute;
+    background-image: url("../images/mappa.png");
+}
+
+/*stile map per ogni singola regione*/
+/* sicilia */
+#map #sicilia a {
+    left: 213px;
+    top: 440px;
+    height: 76px;
+    width: 114px;
+    background-position:-213px -440px;
+}
+
+#map #sicilia a:hover {
+    background-position:-214px -1482px;   
+}
+
+/* calabria */
+#map #calabria a {
+    left: 336px;
+    top: 340px;
+    height: 107px;
+    width: 52px;
+    background-position:-336px -340px;       
+}
+
+#map #calabria a:hover {
+    background-position:-337px -864px;
+    z-index: 6;
+}
+
+/* sardegna */
+#map #sardegna a {
+    left:47px ;
+    top: 283px;
+    height: 106px;
+    width: 55px;
+    background-position: -47px -283px;     
+}
+
+#map #sardegna a:hover {
+    background-position: -48px -807px;    
+}
+
+/* basilicata */
+#map #basilicata a {
+    left: 319px;
+    top: 290px;
+    height: 55px;
+    width: 52px;
+    background-position: -319px -290px;
+    z-index: 1;
+}
+
+#map #basilicata a:hover {
+    background-position: -322px -1851px;
+}
+
+/* puglia */
+#map #puglia a {
+    left: 299px;
+    top: 247px;
+    height: 93px;
+    width: 133px;
+    background-position: -299px -247px;
+    z-index: 0;
+}
+
+#map #puglia a:hover {
+    background-position: -300px -2848px;
+    z-index: 1;
+}
+
+/* campania */
+#map #campania a {
+    left: 259px;
+    top: 272px;
+    height: 68px;
+    width: 72px;
+    background-position: -259px -272px;
+    z-index: 0;
+}
+
+#map #campania a:hover {
+    background-position: -260px -1314px;
+    z-index: 1;
+}
+
+/* molise */
+#map #molise a {
+    left: 262px;
+    top: 245px;
+    width: 38px;
+    height: 27px;
+    background-position: -262px -245px;
+}
+
+#map #molise a:hover {
+    background-position: -263px -769px;
+    z-index: 1;
+}
+
+/* marche */
+#map #marche a {
+    left: 192px;
+    top: 150px;
+    width: 61px;
+    height: 59px;
+    background-position: -192px -150px;
+    z-index: 1;
+}
+
+#map #marche a:hover {
+    background-position: -193px -674px ;
+    z-index: 3;
+}
+
+/* lazio */
+#map #lazio a {
+    left: 172px;
+    top: 212px;
+    width: 86px;
+    height: 71px;
+    background-position: -172px -212px;
+    z-index: 0;
+}
+
+#map #lazio a:hover {
+    background-position: -175px -1773px;
+    z-index: 4;
+}
+
+/* umbria*/
+#map #umbria a {
+    left: 184px;
+    top: 172px;
+    width: 45px;
+    height: 54px;
+    background-position: -184px -172px;
+    z-index: 2;
+}
+
+#map #umbria a:hover {
+    background-position: -186px -2253px;    
+}
+
+/* abruzzo */
+#map #abruzzo a {
+    left: 228px;
+    top: 204px;
+    width: 56px;
+    height: 54px;
+    background-position: -228px -204px;
+    z-index: 1;
+}
+
+#map #abruzzo a:hover {
+    background-position: -229px -1246px;    
+}
+
+/* toscana */
+#map #toscana a {
+    left: 106px;
+    top: 127px;
+    width: 87px;
+    height: 98px;
+    background-position: -106px -127px;
+    z-index: 0;    
+}
+
+#map #toscana a:hover {
+    background-position: -107px -1169px;
+    z-index: 5;
+}
+
+/* emilia romagna */
+#map #emilia a {
+    left: 90px;
+    top: 94px;
+    width: 118px;
+    height: 61px;
+    background-position: -90px -94px;
+    z-index: 0;
+}
+
+#map #emilia a:hover {
+    background-position: -93px -1655px;
+    z-index: 7;
+}
+
+/* liguria */
+#map #liguria a {
+    left: 31px;
+    top: 121px;
+    width: 81px;
+    height: 37px;
+    background-position: -31px -121px;
+    z-index: 1;
+}
+
+#map #liguria a:hover {
+    background-position: -32px -645px;    
+}
+
+/* aosta */
+#map #aosta a {
+    left: 5px;
+    top: 53px;
+    width: 35px;
+    height: 21px;
+    background-position: -5px -53px;
+    z-index: 10;    
+}
+
+#map #aosta a:hover {
+    background-position: -6px -577px ;
+}
+
+/* piemonte */
+#map #piemonte a {
+    left: 1px;
+    top: 37px;
+    width: 86px;
+    height: 105px;
+    background-position: -1px -37px;
+    z-index: 0;
+}
+
+#map #piemonte a:hover {
+    background-position: -2px -1079px;
+    z-index: 8;
+}
+
+/* lombardia */
+#map #lombardia a {
+    left: 65px;
+    top: 24px;
+    width: 91px;
+    height: 86px;
+    background-position: -65px -24px;
+    z-index: 0;
+}
+
+#map #lombardia a:hover {
+    background-position: -66px -2625px;
+    z-index: 12;
+}
+
+/* trentino */
+#map #trentino a {
+    left: 129px;
+    top: 1px;
+    width: 61px;
+    height: 58px;
+    background-position: -129px -1px;
+    z-index: 1;
+}
+
+#map #trentino a:hover {
+    background-position: -132px -1562px ;    
+}
+
+/* veneto */
+#map #veneto a {
+    left: 139px;
+    top: 17px;
+    width: 77px;
+    height: 84px;
+    background-position: -139px -17px;
+    z-index: 0;
+}
+
+#map #veneto a:hover {
+    background-position: -140px -1059px;
+    z-index: 13;
+}
+
+/* friuli */
+#map #friuli a {
+    left: 196px;
+    top: 17px;
+    width: 39px;
+    height: 40px;
+    background-position: -196px -17px;
+    z-index: 1;
+}
+#map #friuli a:hover {
+    background-position: -197px -541px;    
+}
+
+/* media query per rendere lo schermo responsive */
+/* Per schermi di piccole dimensioni */
+@media (max-width: 430px) {
+    h4 {
+        font-size: 5vw;
+    }
+
+    #list div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #region span {
+        font-size: 4vw;
+    }
+
+    #map-container {
+        margin: 0px;
+    }
+}
+
+@media (max-width: 495px) {
+    h4 {
+        font-size: 3.5vw;
+    }
+
+    #list div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #region span {
+        font-size: 3vw;
+    }
+
+    #map-container {
+        margin: 0.2vw auto;
+    }
+}
+
+@media (min-width: 495px) and (max-width: 576px) {
+    h4 {
+        font-size: 3.5vw;
+    }
+
+    #list div {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #region span {
+        font-size: 3vw;
+    }
+
+    #map-container {
+        margin: 1.5vw auto;
+    }
+}
+
+/* Per tablet */
+@media (min-width: 576px) and (max-width: 1024px) {
+    h4 {
+        font-size: 4vw;
+    }
+
+    #list div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #region span {
+        font-size: 3vw;
+    }
+
+    #map-container {
+        margin: 1.2vw auto;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 1024px) and (orientation: landscape) {
+    h4 {
+        font-size: 3.5vw;
+    }
+
+    #list div {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    #region span {
+        font-size: 2.5vw;
+    }
+
+    #map-container {
+        margin: 0.5vw auto;
+    }
+}
+
+/* Per desktop */
+@media (min-width: 1024px) {
+    
+}
+  
